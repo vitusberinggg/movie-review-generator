@@ -1,0 +1,83 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body styling */
+body {
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;  /* stack children vertically */
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none;        /* prevent manual resizing */
+  font-size: 16px;
+  margin-bottom: 15px;
+  overflow: hidden;    /* hide scrollbars */
+  min-height: 60px;    /* starting height */
+  line-height: 1.4em;  /* for consistent height calculation */
+  flex-shrink: 0;      /* prevent flexbox from shrinking it */
+}
+
+
+textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Button styling */
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 30px; /* slightly wider than default */
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #004080;
+}
