@@ -3,7 +3,7 @@
 
 from flask import Flask, render_template, request, jsonify # Imports necessary components from the Flask web framework
 import os # Imports the os module to handle environment variables and file paths
-from markov import load_reviews, generate_text, tokenize, clean_text, order
+from markov import load_reviews, generate_text, tokenize, clean_text
 import random
 
 # --- Definitions ---

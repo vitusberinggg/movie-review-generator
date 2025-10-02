@@ -2,8 +2,8 @@ const textBox = document.getElementById("textBox");
 const generateBtn = document.getElementById("generateBtn");
 
 function autoExpand(el) {
-  el.style.height = "auto";            // reset height
-  el.style.height = el.scrollHeight + "px"; // set to scrollHeight
+  el.style.height = "auto";
+  el.style.height = el.scrollHeight + "px";
 }
 
 // Expand on input
@@ -12,8 +12,8 @@ textBox.addEventListener("input", () => autoExpand(textBox));
 
 textBox.addEventListener("keydown", (e) => {
   if (e.key === "Tab") {
-    e.preventDefault(); // prevent moving focus
-    generateBtn.click(); // trigger button click
+    e.preventDefault();
+    generateBtn.click();
   }
 });
 

@@ -1,4 +1,3 @@
-/* Basic reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +5,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Body styling */
 body {
   background: #f0f2f5;
   display: flex;
@@ -24,16 +22,14 @@ body {
   max-width: 500px;
   text-align: center;
   display: flex;
-  flex-direction: column;  /* stack children vertically */
+  flex-direction: column;
 }
 
-/* Heading */
 h1 {
   margin-bottom: 20px;
   color: #333;
 }
 
-/* Label styling */
 label {
   display: block;
   margin-bottom: 8px;
@@ -47,13 +43,13 @@ textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  resize: none;        /* prevent manual resizing */
+  resize: none;
   font-size: 16px;
   margin-bottom: 15px;
-  overflow: hidden;    /* hide scrollbars */
-  min-height: 60px;    /* starting height */
-  line-height: 1.4em;  /* for consistent height calculation */
-  flex-shrink: 0;      /* prevent flexbox from shrinking it */
+  overflow: hidden;
+  min-height: 60px;
+  line-height: 1.4em;
+  flex-shrink: 0;
 }
 
 
@@ -62,12 +58,11 @@ textarea:focus {
   outline: none;
 }
 
-/* Button styling */
 button {
   background-color: #007BFF;
   color: white;
   border: none;
-  padding: 12px 30px; /* slightly wider than default */
+  padding: 12px 30px;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
