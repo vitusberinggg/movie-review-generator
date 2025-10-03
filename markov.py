@@ -145,7 +145,7 @@ def load_reviews(csv_path, order = order):
 
     return build_markov_chain(reviews, order = order)
 
-def generate_text(chain, starters, all_words, current_tokens):
+def generate_text(chain, all_words, current_tokens):
 
     """
     Generates the next word based on the current tokens.

@@ -1,19 +1,28 @@
-const textBox = document.getElementById("textBox");
-const generateBtn = document.getElementById("generateBtn");
+const textBox = document.getElementById("textBox"); // Gets the textbox element
+const generateBtn = document.getElementById("generateBtn"); // Gets the button element
 
-function autoExpand(el) {
-  el.style.height = "auto";
-  el.style.height = el.scrollHeight + "px";
+function autoExpand(element) {
+
+  /*
+  Auto expands given element.
+
+  Arguments:
+    "element"
+  
+  Returns:
+    None
+  */
+
+  element.style.height = "auto"; // Sets the height to "auto", which shrinks the box if text is deleted
+  element.style.height = element.scrollHeight + "px"; // Sets the height to the current scroll height of the element
 }
 
-// Expand on input
-textBox.addEventListener("input", () => autoExpand(textBox));
+textBox.addEventListener("input", () => autoExpand(textBox)); // Adds event listener to the text box that calls "autoExpand" with argument "textBox" whenever there's input
 
-
-textBox.addEventListener("keydown", (e) => {
-  if (e.key === "Tab") {
-    e.preventDefault();
-    generateBtn.click();
+textBox.addEventListener("keydown", (event) => { // Adds event listener to the textbox that calls following function with argument "event" whenever a key is pressed:
+  if (event.key === "Tab") { // If the key pressed is "Tab"
+    event.preventDefault(); // Prevent the browsers default behaviour (which is moving focus to the next form field or button)
+    generateBtn.click(); // Simulate a click on the button
   }
 });
 
@@ -38,7 +47,7 @@ generateBtn.addEventListener("click", async () => { // Adds event listener to th
     }
     autoExpand(textBox);
   } catch (err) { // If an error occurs...
-    textBox.value = "Error: " + err.message; // Display the error message in the result element
-    autoExpand(textBox);
+    textBox.value = "Error: " + err.message; // Display the error message in the text box
+    autoExpand(textBox); // Call "autoExpand" on the text box
   }
 });
