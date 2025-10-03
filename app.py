@@ -1,21 +1,22 @@
 
 # --- Imports ---
 
+print("\nImporting necessary modules...")
+
 from flask import Flask, render_template, request, jsonify # Imports necessary components from the Flask web framework
-from markov import load_reviews, generate_text, tokenize, clean_text
+from text_generator import load_model, generate_text
+from generate_chain_dictionary import tokenize, clean_text
 import random
 
 # --- Filepath ---
 
 csv_path = "data/IMDB Dataset.csv"
 
-# --- Model loading ---
+# --- Load model ---
 
-print("\nLoading dataset and building model...")
+print("\nLoading model...")
 
-chain_dictionary, starters, all_words = load_reviews(csv_path)
-
-print("\nModel loaded.")
+chain_dictionary, starters, all_words = load_model()
 
 # --- Routes ---
 
@@ -55,4 +56,4 @@ def generate():
     return jsonify({"result": result}) # Creates a dictionary with key "result" and value "result", converts it into a JSON string and returns it to browser
 
 if __name__ == "__main__": # If the script is run directly:
-    app.run(host = "0.0.0.0", port = 5000, debug = True) # Start the Flask server with given specifications
+    app.run(host = "127.0.0.1", port = 5000, debug = False) # Start the Flask server with given specifications
